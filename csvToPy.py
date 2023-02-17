@@ -1,13 +1,15 @@
 import csv 
 
 
-with open ('footballDataset.csv','r') as csvToPy: 
-    team_lines=csvToPy.readlines()
-    for line in team_lines:
-     print(line.rstrip()) 
+with open ('Dataset.csv','r') as csvToPy: 
+    csv_reader = csv.reader(csvToPy) 
+    next(csvToPy)
+    for line in csv_reader:
+       print(line) 
+ 
    
    
-with open ('footballDataset.csv','w') as csvToPy:
-     for x in team_lines:
-      Line=csvToPy.write(x+'th Team\n')
-      print(Line)  
+#with open ('Dataset.csv','w') as csvToPy:
+    # for x in team_lines:
+      #Line=csvToPy.write(x+'th Team\n')
+     # print(Line)  
